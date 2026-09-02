@@ -1,11 +1,11 @@
 let displayValue = "";
 
-function appendNumber(number) {
+function agregar(number) {
     displayValue += number;
     updateDisplay();
 }
 
-function appendOperator(operation) {
+function operacion(operation) {
     if (displayValue === "") return;
     const lastChar = displayValue.slice(-1);
     if ("+-*/".includes(lastChar)) return;
@@ -13,7 +13,7 @@ function appendOperator(operation) {
     updateDisplay();
 }
 
-function calculate () {
+function calcular () {
     try {
         displayValue = eval(displayValue).toString();
         updateDisplay();
@@ -23,11 +23,11 @@ function calculate () {
     }
 }
 
-function clearDisplay () {
+function borrar () {
     displayValue = '';
     updateDisplay ();
 }
 
 function updateDisplay () {
-    document.getElementById('calc-display').value = displayValue;
+    document.getElementById('resultado').value = displayValue;
 }
