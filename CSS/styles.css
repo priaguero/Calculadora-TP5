@@ -30,13 +30,13 @@ body {
     color: rgb(12, 100, 0);
 }
 
-.pantalla {
+.botones {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
-.botones {
+button {
     padding: 20px;
     font-size: 18px;
     background-color: #444444;
